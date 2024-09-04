@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Matte Lipstick",
+    "category": "Lipstick",
+    "description": "Long-lasting matte finish lipstick in various shades.",
+    "price": 15.99,
+    "images": ["/products/lipstick1.png"]
+  },
+  {
+    "id": 2,
+    "name": "Hydrating Foundation",
+    "category": "Foundation",
+    "description": "Lightweight foundation with hydrating properties.",
+    "price": 25.99,
+    "images": ["/products/foundation1.jpeg"]
+  },
+  {
+    "id": 3,
+    "name": "Volumizing Mascara",
+    "category": "Mascara",
+    "description": "Mascara that adds volume and length to your lashes.",
+    "price": 10.99,
+    "images": ["/products/mascara1.webp"]
+  },
+  {
+    "id": 4,
+    "name": "Shimmer Eyeshadow Palette",
+    "category": "Eyeshadow",
+    "description": "Palette with a range of shimmer eyeshadow shades.",
+    "price": 19.99,
+    "images": ["/products/eyeshadou.jpeg"]
+  },
+  {
+    "id": 5,
+    "name": "Cream Lipstick",
+    "category": "Lipstick",
+    "description": "Creamy texture lipstick that hydrates and nourishes lips.",
+    "price": 18.99,
+    "images": ["/products/lipstick2.webp"]
+  },
+  {
+    "id": 6,
+    "name": "Matte Foundation",
+    "category": "Foundation",
+    "description": "Full coverage foundation with a matte finish.",
+    "price": 27.99,
+    "images": ["/products/foundation2.jpeg"]
+  },
+  {
+    "id": 7,
+    "name": "Waterproof Mascara",
+    "category": "Mascara",
+    "description": "Waterproof mascara for all-day wear.",
+    "price": 12.99,
+    "images": ["/products/mascara2.jpeg"]
+  },
+  {
+    "id": 8,
+    "name": "Matte Eyeshadow Palette",
+    "category": "Eyeshadow",
+    "description": "Palette with a range of matte eyeshadow shades.",
+    "price": 22.99,
+    "images": ["/products/eyeshadow2.jpg"]
+  },
+  {
+    "id": 9,
+    "name": "Glossy Lipstick",
+    "category": "Lipstick",
+    "description": "High-shine glossy lipstick in vibrant colors.",
+    "price": 16.99,
+    "images": ["/products/lipstick3.jpg"]
+  },
+  {
+    "id": 10,
+    "name": "Illuminating Foundation",
+    "category": "Foundation",
+    "description": "Foundation that provides a radiant and luminous finish.",
+    "price": 29.99,
+    "images": ["/products/foundetion3.jpeg"]
+  }
+]

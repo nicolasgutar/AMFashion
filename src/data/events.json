@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "date": "2024-09-15",
+    "location": "New York Fashion Week, NY",
+    "participatingModels": ["Alice Smith", "Emma Johnson", "Olivia Brown"],
+    "productsShowcase": ["Matte Lipstick", "Hydrating Foundation", "Volumizing Mascara"]
+  },
+  {
+    "id": 2,
+    "date": "2024-10-05",
+    "location": "Paris Fashion Week, Paris",
+    "participatingModels": ["Sophia Davis", "Isabella Martinez", "Mia Garcia"],
+    "productsShowcase": ["Cream Lipstick", "Matte Foundation", "Shimmer Eyeshadow Palette"]
+  },
+  {
+    "id": 3,
+    "date": "2024-11-20",
+    "location": "Milan Fashion Week, Milan",
+    "participatingModels": ["Amelia Rodriguez", "Ava Martinez", "Charlotte Wilson"],
+    "productsShowcase": ["Glossy Lipstick", "Illuminating Foundation", "Waterproof Mascara"]
+  },
+  {
+    "id": 4,
+    "date": "2024-12-15",
+    "location": "London Fashion Week, London",
+    "participatingModels": ["Harper Moore", "Emma Johnson", "Olivia Brown"],
+    "productsShowcase": ["Matte Eyeshadow Palette", "Hydrating Foundation", "Matte Lipstick"]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Smith",
+    "photo": "/models/alice.webp",
+    "portfolio": "https://portfolio.alice.com",
+    "bookingInfo": "For bookings, contact alice@agency.com"
+  },
+  {
+    "id": 2,
+    "name": "Emma Johnson",
+    "photo": "/models/emma.jpeg",
+    "portfolio": "https://portfolio.emma.com",
+    "bookingInfo": "For bookings, contact emma@agency.com"
+  },
+  {
+    "id": 3,
+    "name": "Olivia Brown",
+    "photo": "/models/olivia.jpeg",
+    "portfolio": "https://portfolio.olivia.com",
+    "bookingInfo": "For bookings, contact olivia@agency.com"
+  },
+  {
+    "id": 4,
+    "name": "Sophia Davis",
+    "photo": "/models/sophia.jpg",
+    "portfolio": "https://portfolio.sophia.com",
+    "bookingInfo": "For bookings, contact sophia@agency.com"
+  },
+  {
+    "id": 5,
+    "name": "Isabella Martinez",
+    "photo": "/models/isabella.jpg",
+    "portfolio": "https://portfolio.isabella.com",
+    "bookingInfo": "For bookings, contact isabella@agency.com"
+  },
+  {
+    "id": 6,
+    "name": "Mia Garcia",
+    "photo": "/models/mia.jpg",
+    "portfolio": "https://portfolio.mia.com",
+    "bookingInfo": "For bookings, contact mia@agency.com"
+  }
+]
