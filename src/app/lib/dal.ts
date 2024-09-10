@@ -30,6 +30,7 @@ export const getUser = async () => {
                 id: true,
                 name: true,
                 email: true,
+                favorites: true,
             },
         });
 

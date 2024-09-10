@@ -2,20 +2,29 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import productsData from '../../data/products.json';
 import ProductCont from "@/components/ProductCont";
 
 const ProductsPage = () => {
-    const [products, setProducts] = useState(productsData);
+    const [products, setProducts] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All');
 
-    const categories = ['All', ...new Set(productsData.map(product => product.category))];
+    const fetchProducts = async () => {
+        const response = await fetch('/api/products');
+        const data = await response.json();
+        setProducts(data);
+    };
+
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
+    const categories = ['All', ...new Set(products.map(product => product.category))];
 
     useEffect(() => {
         if (selectedCategory === 'All') {
-            setProducts(productsData);
+            fetchProducts();
         } else {
-            setProducts(productsData.filter(product => product.category === selectedCategory));
+            setProducts(products.filter(product => product.category === selectedCategory));
         }
     }, [selectedCategory]);
 
@@ -40,7 +49,7 @@ const ProductsPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {products.map((product) => (
-                    <ProductCont key={product.id} product={product} />
+                    <ProductCont key={product.id} product={product} userId={36} />
                 ))}
             </div>
         </div>
