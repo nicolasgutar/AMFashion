@@ -9,9 +9,7 @@ const UserPage = async () => {
     }
 
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const url = new URL(`/api/user/${user.id}/favorites`, baseUrl);
-    const favoritesResponse = await fetch(url.toString());
-    const favorites = await favoritesResponse.json();
+    const favorites = user.favorites
 
     return <UserProfile user={user} favorites={favorites} />;
 };

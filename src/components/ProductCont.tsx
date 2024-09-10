@@ -21,16 +21,6 @@ interface ProductContProps {
 const ProductCont: React.FC<ProductContProps> = ({ product, userId }) => {
     const [isFavorite, setIsFavorite] = useState(false);
 
-    useEffect(() => {
-        const fetchFavorites = async () => {
-            const response = await fetch(`/api/user/${userId}/favorites`);
-            const favorites = await response.json();
-            const isFavorited = favorites.some((fav: { id: number }) => fav.id === product.id);
-            setIsFavorite(isFavorited);
-        };
-        fetchFavorites();
-    }, [product.id, userId]);
-
     const toggleFavorite = async () => {
         const url = `/api/user/${userId}/favorites/${product.id}`;
 
