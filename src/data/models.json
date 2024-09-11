@@ -2,8 +2,8 @@
   {
     "id": 1,
     "name": "Alice Smith",
-    "photo": "/models/alice.webp",
-    "portfolio": "https://portfolio.alice.com",
+    "photo": "/models/alice/alice.webp",
+    "portfolio": "/model/1",
     "bookingInfo": "For bookings, contact alice@agency.com"
   },
   {
