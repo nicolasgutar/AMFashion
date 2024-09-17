@@ -1,9 +1,8 @@
-// src/components/ProductCont.tsx
-
 'use client'
 
 import React, { useState, useEffect } from 'react';
 import { FaStar } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 interface Product {
     id: number;
@@ -15,14 +14,29 @@ interface Product {
 
 interface ProductContProps {
     product: Product;
-    userId: number;
+    user: User | null;
 }
 
-const ProductCont: React.FC<ProductContProps> = ({ product, userId }) => {
-    const [isFavorite, setIsFavorite] = useState(false);
+interface User {
+    id: number;
+    name: string;
+    email: string;
+    favorites: Product[];
+}
+
+const ProductCont: React.FC<ProductContProps> = ({ product, user }) => {
+    const router = useRouter();
+    const [isFavorite, setIsFavorite] = useState(() => {
+        return user ? user.favorites.some(fav => fav.id === product.id) : false;
+    });
 
     const toggleFavorite = async () => {
-        const url = `/api/user/${userId}/favorites/${product.id}`;
+        if (!user) {
+            router.push('/login');
+            return;
+        }
+
+        const url = `/api/user/${user.id}/favorites/${product.id}`;
 
         if (isFavorite) {
             try {

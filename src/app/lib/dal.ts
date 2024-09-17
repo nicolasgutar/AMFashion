@@ -21,8 +21,6 @@ export const getUser = async () => {
     const session = await verifySession();
     if (!session) return null;
 
-    console.log(session);
-
     try {
         const user = await prisma.user.findUnique({
             where: { id: session.userId },

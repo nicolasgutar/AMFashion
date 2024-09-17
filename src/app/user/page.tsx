@@ -8,7 +8,6 @@ const UserPage = async () => {
         return <div>Error: User not found</div>;
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
     const favorites = user.favorites
 
     return <UserProfile user={user} favorites={favorites} />;
