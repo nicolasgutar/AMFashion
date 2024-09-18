@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "name": "Alice Smith",
-    "photo": "/models/alice/alice.webp",
-    "portfolio": "/model/1",
+    "name": "Julia Roberts",
+    "photo": "https://media.allure.com/photos/6568aa8917df88927d066e35/1:1/w_3792,h_3792,c_limit/julia%20roberts%20bangs%20time%20warp%20hero%20.jpg",
+    "portfolio": "/model/7",
     "bookingInfo": "For bookings, contact alice@agency.com"
   },
   {
     "id": 2,
-    "name": "Emma Johnson",
-    "photo": "/models/emma.jpeg",
-    "portfolio": "https://portfolio.emma.com",
+    "name": "Betty White",
+    "photo": "https://people.com/thmb/5ZF0lz7Mqt2LskipDstHgpXAi2Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(629x308:631x310)/betty-white-2-2cf05cee4f0149eda2d29834d20650aa.jpg",
+    "portfolio": "/model/8",
     "bookingInfo": "For bookings, contact emma@agency.com"
   },
   {
     "id": 3,
-    "name": "Olivia Brown",
-    "photo": "/models/olivia.jpeg",
-    "portfolio": "https://portfolio.olivia.com",
+    "name": "Marlyn Monroe",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Marilyn_Monroe_in_How_to_Marry_a_Millionaire.jpg/640px-Marilyn_Monroe_in_How_to_Marry_a_Millionaire.jpg",
+    "portfolio": "/model/9",
     "bookingInfo": "For bookings, contact olivia@agency.com"
   },
   {

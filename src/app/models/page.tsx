@@ -1,31 +1,51 @@
 "use client"; // Ensure this is marked as a Client Component
 
-import Image from 'next/image';
-import modelsData from '../../data/models.json';
+import { useEffect, useState } from 'react';
+import ModelContainer from '@/components/ModelContainer';
+import { Model } from '@/types/Model';
 
 const ModelsPage = () => {
+    const [models, setModels] = useState<Model[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchModels = async () => {
+            try {
+                const response = await fetch('/api/models');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch models');
+                }
+                const data = await response.json();
+                setModels(data);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchModels();
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
     return (
         <div className="container mx-auto p-4">
             <h1 className="text-3xl font-bold mb-4">Models</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {modelsData.map((model) => (
-                    <div key={model.id} className="bg-gray-800 shadow-md rounded-lg p-4">
-                        <Image
-                            src={model.photo}
-                            alt={model.name}
-                            width={500}
-                            height={500}
-                            className="w-full h-48 object-contain mb-4 rounded-lg"
-                        />
-                        <h2 className="text-xl font-semibold">{model.name}</h2>
-                        <p className="text-blue-600 mb-2">
-                            <a href={"/model"} target="_blank" rel="noopener noreferrer">
-                                View Portfolio
-                            </a>
-                        </p>
-                        <p className="text-gray-800">{model.bookingInfo}</p>
-                    </div>
+                {models.map((model) => (
+                    <ModelContainer
+                        key={model.id}
+                        model={model}
+                    />
                 ))}
             </div>
         </div>

@@ -32,3 +32,30 @@ model Product {
   images      String[]
   users       User[]   @relation("UserFavorites")
 }
+
+model Model {
+  id        Int      @id @default(autoincrement())
+  name      String
+  contact   String
+  bio       String
+  profilePic String?
+  images    Image[]  @relation("ModelImages")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Image {
+  id          Int      @id @default(autoincrement())
+  url         String
+  description String
+  modelId     Int
+  model       Model    @relation("ModelImages", fields: [modelId], references: [id])
+}
+
+model Event {
+  id                 Int      @id @default(autoincrement())
+  date               DateTime
+  location           String
+  participatingModels String[]
+  productsShowcase   String[]
+}
