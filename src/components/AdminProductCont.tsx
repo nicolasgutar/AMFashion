@@ -27,9 +27,20 @@ interface User {
 const ProductCont: React.FC<ProductContProps> = ({ product, user }) => {
     const router = useRouter();
 
-    const handleDelete = () => {
-        // Placeholder function for delete action
-        console.log('Delete action triggered');
+    const handleDelete = async () => {
+        try {
+            const response = await fetch(`/api/products/${product.id}`, {
+                method: 'DELETE',
+            });
+            if (response.ok) {
+                // Optionally, you can refresh the page or update the state to remove the deleted product from the UI
+                router.refresh();
+            } else {
+                console.error('Failed to delete product');
+            }
+        } catch (error) {
+            console.error('Error deleting product:', error);
+        }
     };
 
     return (

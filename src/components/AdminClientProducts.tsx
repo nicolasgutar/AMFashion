@@ -51,17 +51,36 @@ const ProductsPage: React.FC<ProductsPageProps>= ({ user }) => {
 
     const handleAddProduct = async (event: React.FormEvent) => {
         event.preventDefault();
-        // Add product to the database (placeholder)
-        console.log('Adding product:', newProduct);
-        // Reset form
-        setNewProduct({
-            id: 0,
-            name: '',
-            description: '',
-            price: 0,
-            images: [],
-            category: ''
-        });
+        try {
+            const productToAdd = {
+                ...newProduct,
+                price: Number(newProduct.price), // Ensure price is a number
+            };
+            const response = await fetch('/api/products', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(productToAdd),
+            });
+            if (response.ok) {
+                const addedProduct = await response.json();
+                setProducts([...products, addedProduct]);
+                // Reset form
+                setNewProduct({
+                    id: 0,
+                    name: '',
+                    description: '',
+                    price: 0,
+                    images: [],
+                    category: ''
+                });
+            } else {
+                console.error('Failed to add product');
+            }
+        } catch (error) {
+            console.error('Error adding product:', error);
+        }
     };
 
     const filteredProducts = selectedCategory === 'all'
